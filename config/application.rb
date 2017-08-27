@@ -20,12 +20,8 @@ module Blogger
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
-    config.before(:all) do
-      DatabaseCleaner.clean
-    end
-    config.after(:each) do
-      DatabaseCleaner.clean
-    end
+
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
