@@ -2,5 +2,7 @@
     <li>
       <%= @article.body %>
     </li>
-    <%= link_to '<< return home', articles_path, class: 'article_index' %>
+    <%= link_to '<< return home', articles_path, class: 'article_home' %>
+    <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}%>
+    <%= link_to "edit", edit_article_path(@article) %>
 </ul>
